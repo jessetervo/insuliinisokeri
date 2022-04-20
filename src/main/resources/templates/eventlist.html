@@ -19,6 +19,7 @@
 				<td th:text="${event.insulinUnit}"></td>
 				<td th:text="${event.preSugar}"></td>
 				<td th:text="${event.postSugar}"></td>
+					<td><a th:href="@{/delete/{id}(id=${event.id})}">Delete</a></td>
 			</tr>
 		
 		</tbody>
