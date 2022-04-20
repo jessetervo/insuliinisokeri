@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Eventlist</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+</head>
+<body style="background-color:powderblue;">
+	<h1>Events</h1>
+	<table>
+		<tbody>
+			<tr>
+				<th>Time</th>
+				<th>Insulin units</th>
+				<th>Sugar before</th>
+				<th>Sugar after</th>
+			</tr>
+			<tr th:each = "event : ${events}">
+				<td th:text="${event.time}"></td>
+				<td th:text="${event.insulinUnit}"></td>
+				<td th:text="${event.preSugar}"></td>
+				<td th:text="${event.postSugar}"></td>
+			</tr>
+		
+		</tbody>
+	</table>
+	<a href="/add" class="btn btn-primary">Add Event</a>
+</body>
+</html>
