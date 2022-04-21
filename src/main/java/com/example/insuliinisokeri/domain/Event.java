@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Event {
 	
@@ -12,7 +13,7 @@ public class Event {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String time, insulinUnit, preSugar, postSugar;
-	
+
 	public Event() {}
 	
 	public Event(String time, String insulinUnit, String preSugar, String postSugar) {
@@ -54,7 +55,9 @@ public class Event {
 	public void setPostSugar(String postSugar) {
 		this.postSugar = postSugar;
 	}
+
 	
+
 	
 	@Override
 	public String toString() {
